@@ -34,7 +34,7 @@ btn.addEventListener('click', function(e){
 reset.addEventListener('click', function(){
     height.value = '';
     weight.value = '';
-    result.innerHTML = '';
+    result.textContent = '';
     
     container.style.display = 'block';
     resultCard.style.display = 'none';
