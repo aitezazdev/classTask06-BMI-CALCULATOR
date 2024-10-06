@@ -1,0 +1,39 @@
+var height = document.getElementById('height');
+var weight = document.getElementById('weight');
+var btn = document.getElementById('btn');
+var result = document.getElementById('result');
+var reset = document.getElementById('reset');
+var container = document.querySelector('.container');
+
+btn.addEventListener('click', function(e){
+    e.preventDefault();
+    var h = height.value;
+    var w = weight.value;
+    var bmi = (w / ((h * h))).toFixed(2);
+    result.innerHTML = bmi;
+
+    if(bmi < 18.5){
+        result.style.color = 'blue';
+        result.textContent = "Underweight";
+    }else if(bmi >= 18.5 && bmi <= 24.9){
+        result.style.color = 'green';
+        result.textContent = "Normal weight";
+    }else if(bmi >= 25 && bmi <= 29.9){
+        result.style.color = 'yellow';
+        result.textContent = "Overweight";
+    }else if(bmi >= 30){
+        result.style.color = 'red';
+        result.textContent = "Obese";
+    }
+
+    container.style.display = 'none';
+});
+
+reset.addEventListener('click', function(){
+    height.value = '';
+    weight.value = '';
+    result.innerHTML = '';
+
+    container.style.display = 'block';
+})
+

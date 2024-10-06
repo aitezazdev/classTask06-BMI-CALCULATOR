@@ -15,7 +15,7 @@ body{
     height: 100vh;
 }
 
-main {
+.container {
     width: 500px;
     background-color: #e6e6c7;
     margin: 50px auto;
@@ -56,3 +56,4 @@ form #btn {
 form #btn:hover {
     background-color: #2a6716;
 }
+
