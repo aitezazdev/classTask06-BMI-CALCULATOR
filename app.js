@@ -5,6 +5,7 @@ var result = document.getElementById('result');
 var reset = document.getElementById('reset');
 var container = document.querySelector('.container');
 var resultCard = document.getElementById('result-card');
+var comment = document.getElementById('comment');
 
 btn.addEventListener('click', function(e){
     e.preventDefault();
@@ -20,20 +21,20 @@ btn.addEventListener('click', function(e){
 
 
     var bmi = (w / ((h * h))).toFixed(2);
-    result.textContent = bmi;
+    result.textContent = `Your BMI is ${bmi}`;
 
     if(bmi < 18.5){
-        result.style.color = 'blue';
-        result.textContent = "Underweight";
+        comment.style.color = 'blue';
+        comment.textContent = "Underweight";
     }else if(bmi >= 18.5 && bmi <= 24.9){
-        result.style.color = 'green';
-        result.textContent = "Normal weight";
+        comment.style.color = 'green';
+        comment.textContent = "Normal weight";
     }else if(bmi >= 25 && bmi <= 29.9){
-        result.style.color = 'yellow';
-        result.textContent = "Overweight";
+        comment.style.color = 'yellow';
+        comment.textContent = "Overweight";
     }else if(bmi >= 30){
-        result.style.color = 'red';
-        result.textContent = "Obese";
+        comment.style.color = 'red';
+        comment.textContent = "Obese";
     }
 
     container.style.display = 'none';
