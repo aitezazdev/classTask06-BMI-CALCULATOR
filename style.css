@@ -105,4 +105,8 @@ form #btn:hover {
     form #weight, #height {
         width: 90%;
     }
+    #result-card {
+        width: 90%;
+        padding: 20px;
+    }
 }
