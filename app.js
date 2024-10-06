@@ -4,13 +4,14 @@ var btn = document.getElementById('btn');
 var result = document.getElementById('result');
 var reset = document.getElementById('reset');
 var container = document.querySelector('.container');
+var resultCard = document.getElementById('result-card');
 
 btn.addEventListener('click', function(e){
     e.preventDefault();
     var h = height.value;
     var w = weight.value;
     var bmi = (w / ((h * h))).toFixed(2);
-    result.innerHTML = bmi;
+    result.textContent = bmi;
 
     if(bmi < 18.5){
         result.style.color = 'blue';
@@ -27,13 +28,15 @@ btn.addEventListener('click', function(e){
     }
 
     container.style.display = 'none';
+    resultCard.style.display = 'block';
 });
 
 reset.addEventListener('click', function(){
     height.value = '';
     weight.value = '';
     result.innerHTML = '';
-
+    
     container.style.display = 'block';
+    resultCard.style.display = 'none';
 })
 
