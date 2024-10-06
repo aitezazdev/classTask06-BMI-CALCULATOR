@@ -10,6 +10,15 @@ btn.addEventListener('click', function(e){
     e.preventDefault();
     var h = height.value;
     var w = weight.value;
+    if (h === '' || w === '') {    
+        alert('Please enter height and weight');
+        return;
+    } else if (h < 0 || w < 0) {
+        alert('Please enter valid values');
+        return;
+    }
+
+
     var bmi = (w / ((h * h))).toFixed(2);
     result.textContent = bmi;
 
