@@ -91,3 +91,17 @@ form #btn:hover {
 #result-card #reset:hover {
     background-color: #a84f0b;
 }
+
+
+@media screen and (max-width: 530px) {
+    h1 {
+        font-size: 25px;
+    }
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+    form #weight, #height {
+        width: 90%;
+    }
+}
